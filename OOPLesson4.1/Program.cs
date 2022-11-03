@@ -9,13 +9,34 @@ namespace MyApp // Note: actual namespace depends on the project name.
         {
 
 
-            Dog dog = new Dog
-            {
-                Age = 30,
-                Life = 30,
-                Name = "asd"
-            };
-            Console.WriteLine($"{dog.Name}{dog.Life}{dog.Age}");
+            //ליצור מחלקה מוסך
+            // prop 
+            //סוג מכונית
+
+            //ליצור בנאי שמקבל את סוג המכונית ושם את הערך בתוך הprop 
+
+            // פונקציה שמחזירה מחרוזת של סוג המכונית
+            
+            //
+            //ליצור מחלקת רכב
+            // prop צבע המכונית 
+
+            //בנאי שמקבל את סוג המכונית וגם את צבע המכונית
+            //עושה השמה לprop  בשימוש base 
+            //פונקציה שמחזירה מחרוזת של סוג המכונית + צבע המכונית להשתמש  base
+
+            //להדפיס בmain
+
+
+
+
+            //Dog dog = new Dog
+            //{
+            //    Age = 30,
+            //    Life = 30,
+            //    Name = "asd"
+            //};
+            //Console.WriteLine($"{dog.Name}{dog.Life}{dog.Age}");
             //base
             //ליצור מחלקה של חיות
             //prop
@@ -34,64 +55,73 @@ namespace MyApp // Note: actual namespace depends on the project name.
 
 
             //אבא  base 
-            Person person = new Person()
-            {
-                FirstName = "sdf",
-                LastName = "sdf"
-            };
+            //Person person = new Person()
+            //{
+            //    FirstName = "sdf",
+            //    LastName = "sdf"
+            //};
             //person.Print();
 
             //ילד  Derived
-            Students st = new Students
-            {
-                FirstName = "dd",
-                Grade = 13,
-                LastName = "sdf"
-            };
-           // st.Print();
+            Students st = new Students("yarin", "sh", 80);
+            Console.WriteLine($"{st.LastName},{st.FirstName},{st.Grade}");
 
-           
 
-            //Dervied נכד
-            SuperStudents super = new SuperStudents
-            {
-                Age = 30,
-                FirstName = "sdf",
-                Grade = 30,
-                LastName = "sdfsd"
-            };
-           // Console.WriteLine($"{st.LastName},{st.FirstName},{st.Grade}");
+            ////Dervied נכד
+            //SuperStudents super = new SuperStudents
+            //{
+            //    Age = 30,
+            //    FirstName = "sdf",
+            //    Grade = 30,
+            //    LastName = "sdfsd"
+            //};
+
 
         }
     }
 
 
+
+    //base
     class Person
     {
+
+        public Person(string firstName, string lastName)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+        }
+
         public string FirstName { get; set; }
         public string LastName { get; set; }
 
         public string Print()
         {
-           return  $""
+            return $"{FirstName},{LastName}";
         }
     }
 
     //Inheritance הורשה 
     class Students : Person
     {
+        public Students(string firstName, string lastName,int grade)
+         :base(firstName, lastName)
+        {
+            Grade = grade;
+        }
+         
         public int Grade { get; set; }
 
-        //public new void Print()
-        //{
-        //    Console.WriteLine("Students");
-        //}
+        public new string Print()
+        {
+            return base.Print() + $"{Grade}";
+        }
 
     }
-    //Inheritance 
-    class SuperStudents : Students
-    {
-        public int Age { get; set; }
+    ////Inheritance 
+    //class SuperStudents : Students
+    //{
+    //    public int Age { get; set; }
 
-    }
+    //}
 }

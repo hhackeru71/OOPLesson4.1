@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OOPLesson4._1;
+using System;
 
 namespace MyApp // Note: actual namespace depends on the project name.
 {
@@ -7,6 +8,14 @@ namespace MyApp // Note: actual namespace depends on the project name.
         static void Main(string[] args)
         {
 
+
+            Dog dog = new Dog
+            {
+                Age = 30,
+                Life = 30,
+                Name = "asd"
+            };
+            Console.WriteLine($"{dog.Name}{dog.Life}{dog.Age}");
             //base
             //ליצור מחלקה של חיות
             //prop
@@ -39,7 +48,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
                 Grade = 13,
                 LastName = "sdf"
             };
-            st.Print();
+           // st.Print();
 
            
 
@@ -62,9 +71,9 @@ namespace MyApp // Note: actual namespace depends on the project name.
         public string FirstName { get; set; }
         public string LastName { get; set; }
 
-        public  void Print()
+        public string Print()
         {
-            Console.WriteLine("person");
+           return  $""
         }
     }
 

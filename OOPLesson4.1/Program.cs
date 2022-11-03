@@ -6,13 +6,31 @@ namespace MyApp // Note: actual namespace depends on the project name.
     {
         static void Main(string[] args)
         {
+
+            //base
+            //ליצור מחלקה של חיות
+            //prop
+            //שם של החיה
+            //גיל החיה
+            //
+
+            //dervied
+            //ליצור מחלקה של כלב
+            //prop
+            // כמה שנים עוד נותר לחיה לחיות
+
+            //לרשת מתוך המחלקה חיות למחלקה כלב 
+            //לתת ערכים לכל הprop
+            //ולהדפיס את כל הprop מתוך מחלקה כלב
+
+
             //אבא  base 
             Person person = new Person()
             {
                 FirstName = "sdf",
                 LastName = "sdf"
             };
-
+            //person.Print();
 
             //ילד  Derived
             Students st = new Students
@@ -21,6 +39,9 @@ namespace MyApp // Note: actual namespace depends on the project name.
                 Grade = 13,
                 LastName = "sdf"
             };
+            st.Print();
+
+           
 
             //Dervied נכד
             SuperStudents super = new SuperStudents
@@ -30,7 +51,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
                 Grade = 30,
                 LastName = "sdfsd"
             };
-            Console.WriteLine($"{st.LastName},{st.FirstName},{st.Grade}");
+           // Console.WriteLine($"{st.LastName},{st.FirstName},{st.Grade}");
 
         }
     }
@@ -40,16 +61,23 @@ namespace MyApp // Note: actual namespace depends on the project name.
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
+
+        public  void Print()
+        {
+            Console.WriteLine("person");
+        }
     }
 
     //Inheritance הורשה 
     class Students : Person
     {
         public int Grade { get; set; }
-        //public Students(int grade)
+
+        //public new void Print()
         //{
-        //    Grade = grade;
+        //    Console.WriteLine("Students");
         //}
+
     }
     //Inheritance 
     class SuperStudents : Students

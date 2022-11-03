@@ -32,9 +32,6 @@ namespace MyApp // Note: actual namespace depends on the project name.
             };
             Console.WriteLine($"{st.LastName},{st.FirstName},{st.Grade}");
 
-
-
-
         }
     }
 
@@ -45,6 +42,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
         public string LastName { get; set; }
     }
 
+    //Inheritance הורשה 
     class Students : Person
     {
         public int Grade { get; set; }
@@ -53,7 +51,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
         //    Grade = grade;
         //}
     }
-
+    //Inheritance 
     class SuperStudents : Students
     {
         public int Age { get; set; }

@@ -16,7 +16,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             //ליצור בנאי שמקבל את סוג המכונית ושם את הערך בתוך הprop 
 
             // פונקציה שמחזירה מחרוזת של סוג המכונית
-            
+
             //
             //ליצור מחלקת רכב
             // prop צבע המכונית 
@@ -63,8 +63,11 @@ namespace MyApp // Note: actual namespace depends on the project name.
             //person.Print();
 
             //ילד  Derived
-            Students st = new Students("yarin", "sh", 80);
-            Console.WriteLine($"{st.LastName},{st.FirstName},{st.Grade}");
+
+            Car car = new Car("red", "sdf");
+            Console.WriteLine(car.Print());
+            //Students st = new Students("yarin", "sh", 80);
+            //Console.WriteLine($"{st.LastName},{st.FirstName},{st.Grade}");
 
 
             ////Dervied נכד
